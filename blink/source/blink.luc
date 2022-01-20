@@ -1,0 +1,15 @@
+module blink ( 
+    input clk, // clock 
+    input rst, // reset 
+    output blink // output to LED 
+  ) { 
+  
+  dff counter[25](
+    .clk(clk), 
+    .rst(rst)); 
+    
+  always { 
+    blink = counter.q[9]; 
+    counter.d = counter.q + 1; 
+  }
+}

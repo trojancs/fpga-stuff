@@ -1,0 +1,15 @@
+module counter (
+    input clk,  // clock
+    input rst,  // reset
+    output num [4]
+  ) {
+  
+  dff counter[31](
+    .clk(clk),
+    .rst(rst));
+
+  always {
+    num = c{counter.q[30], counter.q[29], counter.q[28], counter.q[27]};    
+    counter.d = counter.q + 1;
+  }
+}

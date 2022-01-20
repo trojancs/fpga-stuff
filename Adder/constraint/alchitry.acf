@@ -1,0 +1,26 @@
+pin clk CLOCK;
+clock clk 100MHz;
+
+pin rst_n RESET;
+
+pin led[0] LED0;
+pin led[1] LED1;
+pin led[2] LED2;
+pin led[3] LED3;
+pin led[4] LED4;
+pin led[5] LED5;
+pin led[6] LED6;
+pin led[7] LED7;
+
+pin dataA[0] C48 pulldown;
+pin dataA[1] C49 pulldown;
+pin dataA[2] C3 pulldown;
+pin dataA[3] C2 pulldown;
+pin dataB[0] C45 pulldown;
+pin dataB[1] C46 pulldown;
+pin dataB[2] C6 pulldown;
+pin dataB[3] C5 pulldown;
+
+// flip the Tx/Rx lines
+pin usb_rx USB_TX;
+pin usb_tx USB_RX;
